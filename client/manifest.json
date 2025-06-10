@@ -1,6 +1,16 @@
 {
-    "name": "Neardrop",
-    "short_name": "Neardrop",
+    "name": "Ngedrop!",
+    "short_name": "Ngedrop!",
+    "description": "Ngedrop! Instantly share images, videos, PDFs, and links with people nearby. Peer2Peer, No Setup, No Signup.",
+    "scope": "/drop/",
+    "start_url": "/drop/",
+    "display": "standalone",
+    "background_color": "#efefef",
+    "theme_color": "#3367d6",
+    "categories": [
+        "utilities",
+        "productivity"
+    ],
     "icons": [{
         "src": "images/android-chrome-192x192.png",
         "sizes": "192x192",
@@ -19,22 +29,37 @@
         "sizes": "512x512",
         "type": "image/png",
         "purpose": "maskable"
-    },{
-        "src": "images/favicon-96x96.png",
-        "sizes": "96x96",
-        "type": "image/png"
     }],
-    "background_color": "#efefef",
-    "start_url": "/",
-    "display": "minimal-ui",
-    "theme_color": "#3367d6",
+    "screenshots": [
+        {
+            "src": "images/screenshot-desktop.png",
+            "sizes": "1280x720",
+            "type": "image/png",
+            "form_factor": "wide",
+            "label": "Ngedrop! on Desktop"
+        },
+        {
+            "src": "images/screenshot-mobile.png",
+            "sizes": "720x1280",
+            "type": "image/png",
+            "form_factor": "narrow",
+            "label": "Ngedrop! on Mobile"
+        }
+    ],
     "share_target": {
-        "method":"GET",
-        "action": "/?share_target",
+        "action": "./",
+        "method": "POST",
+        "enctype": "multipart/form-data",
         "params": {
             "title": "title",
             "text": "text",
-            "url": "url"
+            "url": "url",
+            "files": [
+                {
+                    "name": "files",
+                    "accept": ["image/*", "video/*", "audio/*", "application/pdf", ".zip", ".tar"]
+                }
+            ]
         }
     }
 }

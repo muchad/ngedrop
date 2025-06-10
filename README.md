@@ -1,16 +1,18 @@
-# NearDrop.me
+# Ngedrop!
 
-[NearDrop.me](https://neardrop.me): local and remote file sharing in your browser. 
-
-## Additional Features
-This project is built on top of the open software [SnapDrop](https://github.com/omniashare/snapdrop).  While preserving most of the features of SnapDrop, the following features are added:
-* Add remote file sharing via user-created rooms
-* Allow users to change local device name
-* Allow cancellation of a time-consuming file transfer process
-* Enhance WebSocket connections to avoid ghost devices
-
-## Notes
-A free web server is used to provide local and remote file sharing. In case you find the file transfer process too slow, you can try sharing the files at a later time when the server is less busy. 
+[muchad.com/drop](https://muchad.com/drop): local file sharing in your browser. 
 
 
- 
+This project began as a modified version of the excellent open-source [neardrop](https://github.com/omniashare/neardrop), which itself is based on the original [snapdrop](https://github.com/snapdrop/snapdrop). 
+
+
+### Key Enhancements
+While preserving the core features of its predecessors, this version introduces several upgrades:
+
+* **🚀 Robust Connection Stability**: Replaced the manual application-level ping/pong with a low-level WebSocket heartbeat mechanism. This drastically reduces "ghost peers" and accurately detects abrupt disconnects, a common issue on mobile devices.
+
+* **⚡️ Always-On Service**: Implemented a `/ping` health-check endpoint that works with a cron job to keep the free-tier service on free web server alive and prevent it from sleeping.
+      
+
+### Notes
+This service is hosted on free web server, so the performance may vary depending on traffic. If you experience slowness, please feel free to try again at a later time.

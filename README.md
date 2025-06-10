@@ -1,6 +1,6 @@
 # Ngedrop!
 
-[muchad.com/drop](https://muchad.com/drop): simple local file sharing in your browser. 
+[muchad.com/drop](https://muchad.com/drop): Send text and share files with anyone nearby on the same Wi-Fi. 
 
 
 This project began as a modified version of the excellent open-source [neardrop](https://github.com/omniashare/neardrop), which itself is based on the original [snapdrop](https://github.com/snapdrop/snapdrop). 
